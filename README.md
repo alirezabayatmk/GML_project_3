@@ -52,6 +52,16 @@ Link prediction (network reconstruction) is the best way to analyze an unsupervi
 2. achieving close to optimal performance in two of the other largest graphs, wiki-vote and ca-AstoPh.
 3. AUC-ROC of SPLITTER is higher than every other baseline using about 16pbar (average number of personas per node) dimensions for all datasets, except one which is M-NMF on ca-HepTh dataset.
 
+<!-- ![Link Prediction Results](link_prediction_results.png) -->
+<p align="middle">
+  <img src="link_prediction_results.png" width="700" />
+</p>
+
 ### Task: Visualization
 1. the persona graph community structure is clearer than the one in the original graph.
 2. more separated embeddings (in 2D) in contrast to M-NMF.
+
+<p align="middle">
+  <img src="visualization_results.png" width="700" />
+</p>
+
