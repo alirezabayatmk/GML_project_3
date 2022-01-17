@@ -27,7 +27,7 @@ X_scaled = scaler.fit_transform(X)
 #target
 y = df_2['Connection']
 
-X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, random_state = 0, shuffle=True, test_size=0.3)
+X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, random_state = 0, shuffle=True, test_size=0.5)
 
 
 # scores = ['accuracy', 'precision', 'recall', 'roc_auc', 'f1']
@@ -95,7 +95,7 @@ params = [params1, params2, params3, params4, params5, params6]
 
 # applying grid search
 # gs = GridSearchCV(pipeline, params, cv=5, n_jobs=-1, scoring=scores, refit='roc_auc', verbose=3).fit(X_train, y_train)
-gs = GridSearchCV(pipeline, params, cv=5, n_jobs=-1, scoring='roc_auc', verbose=3).fit(X_train, y_train)
+gs = GridSearchCV(pipeline, params, cv=3, n_jobs=-1, scoring='roc_auc', verbose=3).fit(X_train, y_train)
 
 
 # saving the grid search results for later use
