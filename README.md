@@ -37,7 +37,7 @@ This project is based on two papers, one directly and another one indirectly:
 - [ ] 2. a **natural embedding method** based on the **_persona graph_** <ins>outperforms</ins> many embedding baselines in the task of <ins>link prediction</ins>. (P. 5)
 
 ## Task: Link Prediction
-- [ ] Link prediction (network reconstruction) is the best way to analyze an unsupervised network embedding's performance; as it is a primary task (unlike node classification - a secondary task that involves a labeling process that may be uncorrelated with the graph itself).
+- [X] Link prediction (network reconstruction) is the best way to analyze an unsupervised network embedding's performance; as it is a primary task (unlike node classification - a secondary task that involves a labeling process that may be uncorrelated with the graph itself).
 
 ## Experimental Results
 ### Non-embedding Methods
