@@ -10,6 +10,7 @@ def text_to_zeroed_csv(path):
     df = df.rename(columns={'# FromNodeId':'Source','ToNodeId':'Target'})
     
     G = nx.from_pandas_edgelist(df,'Source','Target')
+    G.remove_edges_from(nx.selfloop_edges(G))
     nodes = G.number_of_nodes()
     edges = G.number_of_edges()
     
