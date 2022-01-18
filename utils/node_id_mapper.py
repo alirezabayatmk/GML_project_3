@@ -30,7 +30,7 @@ def text_to_zeroed_csv(path):
     df['From'] = df['From'].map(d)
     df['To'] = df['To'].map(d)
     
-    return(f'Number of nodes in the graph: {nodes}', f'Number of edges in the graph: {edges}', df.to_csv('datasets/{}(corrected_index).csv'.format(dataset_name), index=False), df_id.to_csv('mapping_data/{}(mapped_id).csv'.format(dataset_name)))
+    return(f'Number of nodes in the graph: {nodes}', f'Number of edges in the graph: {edges}', df.to_csv('datasets/normalized_id/{}(corrected_index).csv'.format(dataset_name), index=False), df_id.to_csv('mapping_data/{}(mapped_id).csv'.format(dataset_name)))
 
 
 if __name__=='__main__':
