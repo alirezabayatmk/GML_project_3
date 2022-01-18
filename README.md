@@ -1,3 +1,5 @@
+# Deadline
+02.02.2022 04:00 (night)
 # Is a single Embedding Enough? Learning Node Representations that Capture Multiple Social Contexts
 This project is based on two papers, one directly and another one indirectly:
 1. **Main Paper**: [*Is a Single Embedding Enough? Learning Node Representations that Capture Multiple Social Contexts*](https://arxiv.org/abs/1905.02138)
