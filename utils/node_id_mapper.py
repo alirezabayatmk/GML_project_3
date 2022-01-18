@@ -1,7 +1,6 @@
 import pandas as pd
 import networkx as nx
-
-path_df = "datasets/main/CA-HepTh.txt"
+from pathlib import Path
 
 
 def text_to_zeroed_csv(path):
@@ -29,9 +28,14 @@ def text_to_zeroed_csv(path):
 
     df['From'] = df['From'].map(d)
     df['To'] = df['To'].map(d)
+
+    df.to_csv('datasets/normalized_id/{}(corrected_index).csv'.format(dataset_name), index=False)
+    df_id.to_csv('mapping_data/{}(mapped_id).csv'.format(dataset_name))
     
-    return(f'Number of nodes in the graph: {nodes}', f'Number of edges in the graph: {edges}', df.to_csv('datasets/normalized_id/{}(corrected_index).csv'.format(dataset_name), index=False), df_id.to_csv('mapping_data/{}(mapped_id).csv'.format(dataset_name)))
+    return(f'Number of nodes in the graph: {nodes}', f'Number of edges in the graph: {edges}')
 
 
 if __name__=='__main__':
-    text_to_zeroed_csv(path_df)
+    files = Path('datasets/main').glob('*.txt')
+    for file in files:
+        text_to_zeroed_csv(str(file))
